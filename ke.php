@@ -10,8 +10,7 @@ function ke_content($content, $suffix = "/statics/images/product_2.jpg") {
     $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
     $content = preg_replace($pregRule, '<img class="lazy" src="' . $suffix . '" data-original="${1}">', $content, -1, $lazyload);
     if ($lazyload > 0) {
-        $content .= '<script type="text/javascript" src="/statics/front/script/jquery.lazyload.js"></script>\n
-        <script type="text/javascript">$(".lazy img").lazyload({effect: "fadeIn"});</script>';
+        $content .= '<script type="text/javascript" src="/statics/front/script/jquery.lazyload.js"></script><script type="text/javascript">$("img.lazy").lazyload({effect: "fadeIn"});</script>';
     }
     if ($use_ckplayer_plugin) {
         $content .= '<script type="text/javascript" src="/statics/js/ckplayer/ckplayer.js"></script>';

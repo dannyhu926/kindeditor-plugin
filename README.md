@@ -1,4 +1,7 @@
-KindEditor/添加自定义插件
+var host =  location.protocol + '//' + location.host;
+
+
+添加自定义插件
 
 在下载的　KindEditor/lang/zh_CN.js里边自定义你插件所提示的文字
 
