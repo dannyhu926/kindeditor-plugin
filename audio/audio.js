@@ -45,7 +45,7 @@ KindEditor.plugin('audio', function (K) {
                                 urlBox[0].focus();
                                 return;
                             }
-                            var autoplay = autostartBox[0].checked ? true: false;
+                            var autoplay = autostartBox[0].checked ? "autoplay" : "";
                             var html = '<p><audio src="' + url + '" autoplay="' + autoplay + '" controls="controls"></audio><br/></p>';
                             self.insertHtml(html).hideDialog().focus();
                         }
